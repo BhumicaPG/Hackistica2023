@@ -129,14 +129,14 @@ const Cart = () => {
                   </span>
                 </td>
                 <td>
-                  <span className={styles.price}>${product.price}</span>
+                  <span className={styles.price}>₹{product.price}</span>
                 </td>
                 <td>
                   <span className={styles.quantity}>{product.quantity}</span>
                 </td>
                 <td>
                   <span className={styles.total}>
-                    ${product.price * product.quantity}
+                  ₹{product.price * product.quantity}
                   </span>
                 </td>
               </tr>
@@ -148,13 +148,13 @@ const Cart = () => {
         <div className={styles.wrapper}>
           <h2 className={styles.title}>CART TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Subtotal:</b>${cart.total}
+            <b className={styles.totalTextTitle}>Subtotal:</b>₹{cart.total}
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Discount:</b>$0.00
+            <b className={styles.totalTextTitle}>Discount:</b>₹0.00
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total:</b>${cart.total}
+            <b className={styles.totalTextTitle}>Total:</b>₹{cart.total}
           </div>
           {open ? (
             <div className={styles.paymentMethods}>
@@ -166,13 +166,13 @@ const Cart = () => {
               </button>
               <PayPalScriptProvider
                 options={{
-                  "client-id":
-                    "ATTL8fDJKfGzXNH4VVuDy1qW4_Jm8S0sqmnUTeYtWpqxUJLnXIn90V8YIGDg-SNPaB70Hg4mko_fde4-",
-                  components: "buttons",
-                  currency: "USD",
-                  "disable-funding": "credit,card,p24",
+                    "client-id": "AV9t4X9NWuxJlJw9Uw2rg8SNiB3jmtXVAhAeLvom5CT07IpEuDOPMvmPfjGGoNw8Dr_ieeGa-HV4216a" ,
+                    components: "buttons",
+                    currency: "USD",
+                    //"disable-funfing":"credit,card,p24"
+
                 }}
-              >
+            >
                 <ButtonWrapper currency={currency} showSpinner={false} />
               </PayPalScriptProvider>
             </div>
