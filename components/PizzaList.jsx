@@ -4,11 +4,12 @@ import PizzaCard from "./PizzaCard";
 const PizzaList = ({ pizzaList }) => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Food To Put You In Good Mood</h1>
+      <h1 className={styles.title}>THE BEST DISHES IN THE CAMPUS! </h1>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu
-        in pretium molestie. Interdum et malesuada fames acme. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit.
+        Get delicious veg and non-veg dishes!<br />
+        Have a sip of various cold and hot beverages!<br />
+        Enjoy delicious desserts!<br />
+        Quality food at affordable prices!
       </p>
       <div className={styles.wrapper}>
         {pizzaList.map((pizza) => (
