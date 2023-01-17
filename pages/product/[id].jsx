@@ -50,7 +50,6 @@ const Product = ({ pizza }) => {
         <span className={styles.price}>${price}</span>
         <p className={styles.desc}>{pizza.desc}</p>
         <p className={styles.ingredients}>{pizza.extraOptions}</p>
-        <h3 className={styles.choose}>Choose additional ingredients</h3>
         
         <div className={styles.add}>
           <input
