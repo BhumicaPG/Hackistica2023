@@ -99,6 +99,7 @@ const Cart = () => {
             <tr className={styles.trTitle}>
               <th>Product</th>
               <th>Name</th>
+              <th>Extras</th>
               <th>Price</th>
               <th>Quantity</th>
               <th>Total</th>
@@ -119,6 +120,13 @@ const Cart = () => {
                 </td>
                 <td>
                   <span className={styles.name}>{product.title}</span>
+                </td>
+                <td>
+                  <span className={styles.extras}>
+                    {product.extras.map((extra) => (
+                      <span key={extra._id}>{extra.text}, </span>
+                    ))}
+                  </span>
                 </td>
                 <td>
                   <span className={styles.price}>₹{product.price}</span>
@@ -158,7 +166,7 @@ const Cart = () => {
               </button>
               <PayPalScriptProvider
                 options={{
-                    "client-id": "AdAJvkRP-_iql-Wn-e-dWPQRBf6_pnQICavjYim775BDCwCdvojz_vPozbb1WzuULx974vNVRYx0nPi0" ,
+                    "client-id": "AV9t4X9NWuxJlJw9Uw2rg8SNiB3jmtXVAhAeLvom5CT07IpEuDOPMvmPfjGGoNw8Dr_ieeGa-HV4216a" ,
                     components: "buttons",
                     currency: "USD",
                     //"disable-funfing":"credit,card,p24"
